@@ -1,0 +1,519 @@
+:root {
+    --primary: #dde2eb;
+    --bg: 
+    #001738 ;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+
+body {
+    max-height:0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+ font-size: 16px; 
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ user-select:none;
+ -moz-user-select:none;
+ -ms-user-select:none;
+ -khtml-user-select:none;
+ -webkit-user-select:none
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(40, 34, 34);
+    border-bottom: 1px solid #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+right: 0;
+z-index: 9999;
+
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color:#eadede;
+    font-style: italic;
+}
+
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+
+
+}
+
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+
+}
+
+
+.navbar .navbar-nav a:hover{
+    color: #ab8585;
+}
+
+
+.navbar .navbar-nav a::after {
+    transition: 0.2s linear;    
+        content: '';
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid var(--primary);
+        transform: scaleX(0)
+        
+}
+
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.7);
+}
+
+
+.navbar .navbar-nap {
+    display: inline-block;
+}
+
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+
+}
+
+
+.navbar .navbar-extra a {
+    color:#fff;
+    margin: 0 0.5rem;
+    
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+
+#hamburger-menu {
+    display: none;
+ 
+}
+
+.home {
+    padding: 0;
+    margin: 0;
+    position: relative; 
+    height: 100vh;
+    text-align: center; 
+}
+
+.home h2 {
+    font-size: 6rem;
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+    margin: 0; 
+    animation: fadeIn 2s ease-in-out;
+}
+
+.home p {
+    font-style: italic;
+    font-size: 4.5rem; /* Default font size for larger screens */
+    position: absolute; 
+    top: 70%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    animation: fadeIn 8s ease-in-out;
+    margin: 0 40px;
+}
+
+/* Keyframe untuk teks */
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.pelajaran, .pengurus {
+    padding: 9rem 7% 1.4rem;
+}
+
+.pengurus h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.pengurus h2 span {
+    color: #eadede;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+/* Slider container */
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    display: block;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+
+
+/* PEngurus kelas */
+
+.pengurus {
+    margin-bottom: 1rem;
+    padding: 0;
+    margin: 200px 0;
+    align-items: center;
+    text-align: center;
+ 
+}
+
+.pengurus .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+
+.pengurus .row .pengurus-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+
+.pengurus .row .pengurus-card img {
+    border-radius: 110%;
+    width: 70%;
+    
+}
+
+
+.pengurus .row .pengurus-card .pengurus .row .pengurus-card-title {
+    margin: 1rem auto 0.5rem;
+}
+
+.Senin,
+.Selasa,
+.Rabu,
+.Kamis,
+.Jumat {
+    margin-right: 570px;
+    margin-left: 570px;
+    text-align: center;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(#dde2eb, #223c60);
+}
+
+.mapel {
+    margin: 20px 0;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: ghostwhite;
+    font-size: 15px;
+    padding: 15px;
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: auto;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Footer icon */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 3rem;
+}
+
+
+footer .sosial {
+    padding: 1rem 0;
+}
+
+
+footer .sosial a {
+    color: white;
+    margin: 1rem;
+}
+
+footer .sosial a:hover, footer .links a:hover {
+    color: white;
+}
+
+footer .links {
+    
+    margin-bottom: 1.4rem;
+}
+
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+
+footer .credit {
+    color: white;
+    font-size: 0.8rem;
+}
+
+
+footer .credit a {
+    color: var(--bg);
+    font-weight: 700;
+}
+
+
+
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+
+    
+.home .animation h2 span {
+    position: center;
+}
+
+.home p {
+    font-size: 4.5rem;
+    position: absolute; 
+    top: 70%;
+    transform: translate(-50%, -50%); 
+    animation: fadeIn 8s ease-in-out;
+  margin: 0 40px;
+}
+
+.Senin,
+.Selasa,
+.Rabu,
+.Kamis,
+.Jumat {
+    margin-right: 185px;
+    margin-left: 185px;
+}
+
+.mapel {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    height: auto; 
+    padding: 10px; 
+}
+
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+
+
+.navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 35rem;
+    height: 100vh;
+    transition: 0.3s;
+ }
+
+
+ .navbar .navbar-nav.active {
+    right: 0;
+}
+
+
+.navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+ 
+
+.navbar .navbar-nav a:hover::after {
+    transform:scaleX(0.2);
+
+}
+
+
+.navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+    
+}
+
+
+.home .animation h2 span {
+    position: center;
+}
+
+.home p {
+    font-size: 4.5rem;
+    position: relative; 
+    top: 70%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    animation: fadeIn 8s ease-in-out;
+  margin: 0 40px;
+}
+
+.Senin,
+.Selasa,
+.Rabu,
+.Kamis,
+.Jumat {
+    margin-right: 185px;
+    margin-left: 185px;
+}
+
+.mapel {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    height: auto; 
+    padding: 10px; 
+}
+
+}
+
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+.home p {
+    font-size: 4.5rem;
+    position: absolute; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    animation: fadeIn 8s ease-in-out;
+   margin: 10% 0;
+}
+
+.home .animation h2 span {
+    position: center;
+}
+
+.Senin,
+.Selasa,
+.Rabu,
+.Kamis,
+.Jumat {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.mapel {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+    padding: 8px; 
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
